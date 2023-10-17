@@ -1,6 +1,5 @@
-"use-client";
+import { CreateServerModal } from "@/components/modals/CreateServerModal";
 
-import { ModeToggle } from "@/components/toggleMode";
 import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initial-profile";
 import { redirect } from "next/navigation";
@@ -22,7 +21,7 @@ const SetupPage = async () => {
   }
 
   console.log(profile, server);
-  return <div>Crete a server</div>;
+  return <CreateServerModal />;
 };
 
 export default SetupPage;
