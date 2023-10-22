@@ -1,4 +1,4 @@
-import { CreateServerModal } from "@/components/modals/CreateServerModal";
+import { InitialModal } from "@/components/modals/InitanModal";
 
 import { db } from "@/lib/db";
 import { initialProfile } from "@/lib/initial-profile";
@@ -21,7 +21,7 @@ const SetupPage = async () => {
   }
 
   console.log(profile, server);
-  return <CreateServerModal />;
+  return <InitialModal />;
 };
 
 export default SetupPage;
