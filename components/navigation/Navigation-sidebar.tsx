@@ -8,7 +8,7 @@ import NavigationAction from "@/components/navigation/Navigation-action";
 import { Separator } from "@/components/ui/separator";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import NavigationItem from "@/components/navigation/Navigation-item";
-import { ModeToggle } from "../ToggleMode";
+import { ModeToggle } from "@/components/ToggleMode";
 
 const NavigationSidebar = async () => {
   const profile = await currentProfile();
