@@ -13,6 +13,7 @@ import ServerMember from "@/components/server/ServerMember";
 
 interface Props {
   serverId: string;
+  view?: string;
 }
 
 const iconMap = {
@@ -29,7 +30,7 @@ const roleIconMap = {
   [MemberRole.ADMIN]: <ShieldAlert className="h-4 w-4 mr-2 text-rose-500" />,
 };
 
-const ServerSidebar: React.FC<Props> = async ({ serverId }) => {
+const ServerSidebar: React.FC<Props> = async ({ serverId, view = "large" }) => {
   const profile = await currentProfile();
 
   if (!profile) {
@@ -80,7 +81,7 @@ const ServerSidebar: React.FC<Props> = async ({ serverId }) => {
 
   return (
     <div className="flex flex-col h-full text-primary w-full dark:bg-[#2B2D31] bg-[#F2f3f5]">
-      <ServerHeader server={server} role={role} />
+      <ServerHeader server={server} role={role} view={view} />
 
       <ScrollArea className="flex-1 px-3">
         <div className="mt-2">
