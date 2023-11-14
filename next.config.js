@@ -13,7 +13,8 @@ const nextConfig = {
             "utfs.io",
             "uploadthing.com"
         ]
-    }
+    },
+    swcMinify: false
 }
 
 module.exports = nextConfig
