@@ -39,7 +39,10 @@ export const useChatQuery = ({
       queryKey: [queryKey],
       queryFn: fetchMessages,
       getNextPageParam: (lastPage) => lastPage?.nextCursor,
-      refetchInterval: isConnected ? false : 1000,
+      refetchInterval:
+        isConnected && process.env.NEXT_PUBLIC_IS_VERCEL_APP !== "vercel"
+          ? false
+          : 1000,
     });
 
   return {
